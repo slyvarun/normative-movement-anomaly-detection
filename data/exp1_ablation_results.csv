@@ -1,0 +1,5 @@
+Modality / Sensor System,Features (D),Accuracy (%),F1-Score (Macro),Sensitivity (%),Specificity (%),ROC-AUC
+sEMG-only,5,32.92% ± 3.82%,0.3159,32.92%,77.64%,0.5799
+AMG-only,3,55.42% ± 2.59%,0.5399,55.42%,85.14%,0.8114
+Kinematics-only,6,66.88% ± 5.45%,0.6624,66.88%,88.96%,0.8948
+Combined Multimodal Fusion,14,75.42% ± 4.09%,0.7505,75.42%,91.81%,0.9222
