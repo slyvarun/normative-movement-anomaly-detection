@@ -1,5 +1,8 @@
-Modality / Sensor System,Features (D),Accuracy (%),F1-Score (Macro),Sensitivity (%),Specificity (%),ROC-AUC
-sEMG-only,5,32.92% ± 3.82%,0.3159,32.92%,77.64%,0.5799
-AMG-only,3,55.42% ± 2.59%,0.5399,55.42%,85.14%,0.8114
-Kinematics-only,6,66.88% ± 5.45%,0.6624,66.88%,88.96%,0.8948
-Combined Multimodal Fusion,14,75.42% ± 4.09%,0.7505,75.42%,91.81%,0.9222
+Modality,Features (D),Accuracy (%),F1-Macro,Sensitivity (%),Specificity (%),ROC-AUC
+sEMG-only (Single),5,32.92% ± 3.82%,0.3159,32.92%,77.64%,0.5799
+AMG-only (Single),3,55.42% ± 2.59%,0.5399,55.42%,85.14%,0.8114
+Kinematics-only (Single),6,66.88% ± 5.45%,0.6624,66.88%,88.96%,0.8948
+sEMG + AMG (Dual),8,53.54% ± 3.40%,0.5246,53.54%,84.51%,0.8033
+sEMG + Kinematics (Dual),11,66.04% ± 4.69%,0.6549,66.04%,88.68%,0.8987
+AMG + Kinematics (Dual),9,73.33% ± 1.41%,0.7285,73.33%,91.11%,0.9149
+Combined Multimodal (Triple),14,75.42% ± 4.09%,0.7505,75.42%,91.81%,0.9222
