@@ -17,11 +17,22 @@ htmlcov/
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints/
 
-# Excluded Directories (Documentation & Rendered Figures)
+# Excluded Directories (Documentation, Figures, Data, and Serialized Models)
 docs/
 figures/
+data/
+models/
+
+# Excluded Data & Image Files
+*.csv
+*.joblib
+*.pkl
+*.jpg
+*.png
 
 # System Files
 .DS_Store
 Thumbs.db
 desktop.ini
+
+
