@@ -20,22 +20,24 @@ This repository provides an open-source analysis framework for multimodal sensor
 
 ---
 
-## 📊 Dataset Overview & Methodology
+## 📊 Datasets & Experimental Setup
 
-### 1. Dataset Source
-- **Hugging Face Hub Repository**: [`Tdongxu/A_Synchronized_Lower_Limb_AMG_sEMG_and_Mocap`](https://huggingface.co/datasets/Tdongxu/A_Synchronized_Lower_Limb_AMG_sEMG_and_Mocap)
-- **Monash University Biomechanics Dataset**: Dataset ID `24515092`
+Our research framework incorporates **two distinct dataset sources**:
 
-### 2. Experimental Cohorts & Modalities
-The dataset contains synchronized biomedical sensor signals collected across **95 human participants (805 total trials)** performing lower-limb tasks (Sit-to-Walk, Deadlift, Deep Squat, Forward Lunge, and Stair Ascent).
-- **Surface Electromyography (sEMG)**: 8 lower-limb channels (Rectus Femoris, Vastus Lateralis/Medialis, Semitendinosus, Biceps Femoris, Tibialis Anterior, Gastrocnemius Medialis/Lateralis) calibrated against Maximum Voluntary Contraction (MVC).
-- **Acoustic Myography (AMG)**: Acoustic sensors recorded over muscle bellies (5 Hz high-pass filtered).
-- **Kinematics & IMUs**: 3D joint angles (degrees) and tri-axial IMU accelerations ($g$).
+### 1. Monash University Biomechanics Dataset (Dataset ID `24515092`)
+- **Origin**: Monash University Biomechanics Group.
+- **Focus**: Functional Sit-to-Walk transitions across **65 human participants** categorized into 3 distinct age cohorts:
+  - **Young Normative Cohort**: $N=27$ (Age 18–35)
+  - **Middle-Aged Cohort**: $N=20$ (Age 36–59)
+  - **Older Adult Cohort**: $N=18$ (Age 60+)
+- **Recorded Modalities**: 3D Joint Kinematics (degrees) and tri-axial IMU accelerations ($g$).
+- **Role in Study**: Used in **Experiment 2** for Normative Anomaly Detection (Isolation Forest) and Linear Mixed-Effects Model (LMM) aging trajectory analysis.
 
-#### Participant Cohort Breakdown:
-- **Young Normative Cohort**: $N=27$ (Age 18–35)
-- **Middle-Aged Cohort**: $N=20$ (Age 36–59)
-- **Older Adult Cohort**: $N=18$ (Age 60+)
+### 2. Hugging Face Multimodal Dataset ([`Tdongxu/A_Synchronized_Lower_Limb_AMG_sEMG_and_Mocap`](https://huggingface.co/datasets/Tdongxu/A_Synchronized_Lower_Limb_AMG_sEMG_and_Mocap))
+- **Origin**: Independent repository hosted on Hugging Face Hub (Dongxu T. et al.).
+- **Focus**: Synchronized multimodal lower-limb exercise recordings (Deadlift, Deep Squat, Forward Lunge, Stair Ascent, Sit-to-Walk).
+- **Recorded Modalities**: 8 sEMG channels (%MVC normalized), Acoustic Myography (AMG, 5 Hz high-pass filtered), and Motion Capture (MoCap) Kinematics.
+- **Role in Study**: Used in **Experiment 1** for 5-Fold GroupKFold Multimodal Modality Ablation benchmarking.
 
 ### 3. Processing Pipeline
 - **%MVC Normalization & 14D Feature Extraction ([`01_dataset_processing.ipynb`](notebooks/01_dataset_processing.ipynb))**:
